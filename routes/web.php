@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('lista');
-});
+
+Route::get('/', 'LivroController@create', 'index')->name('index');
+Route::get('/livro/list','LivroController@show')->name('lista');
 Route::get('livro/novo','LivroController@create')->name('novo_livro');
 Route::post('/livro/novo','LivroController@store')->name('salvar_livro');
-Route::get('/livro/list','LivroController@show')->name('lista');
 Route::get('/livro/del/{id}','LivroController@destroy')->name('excluir_livro');
 Route::get('/livro/edit/{id}','LivroController@edit')->name('editar_livro');
 Route::post('/livro/edit/{id}','LivroController@update')->name('atualizar_livro');

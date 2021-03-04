@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class LivroController extends Controller
 {
+    public function index()
+    {
+      return view('livro.list');
+    }
+
     public function create()
     {
         return view('livro.create');
@@ -18,6 +23,7 @@ class LivroController extends Controller
                        'preco'=>$request->preco,]);
 
         return 'Os dados foram salvos com sucesso!';
+        
     }
     public function show()
     {

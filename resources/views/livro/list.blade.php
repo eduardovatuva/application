@@ -34,7 +34,7 @@
                 <td><a href="{{ route('editar_livro', ['id'=>$livro->id])}}"
                         title="Editar{{ $livro->nome }}" >Editar</a></td>
                         
-                <td><a href="{{ route('lista', ['id'=>$livro->id])}}"
+                <td><a href="{{ route('excluir_livro', ['id'=>$livro->id])}}"
                         title="Excluir{{ $livro->nome }}" >Excluir</a></td>
             </tr>
         @endforeach

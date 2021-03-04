@@ -23,13 +23,13 @@
         <form action="{{ route('atualizar_livro', ['id' => $livros->id]) }}" method="post">
         @csrf
             <div><label for="isbn">ISBN</label>
-            <input type="text" name="isbn" id="isbn" value="{{$livros->isbn}}" class="form-control"></div>
+            <input type="text" name="isbn" id="isbn" value="{{$livros->isbn}}" class="form-control" required></div>
             <div><label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome"  value="{{$livros->nome}}" class="form-control"></div>
+            <input type="text" name="nome" id="nome"  value="{{$livros->nome}}" class="form-control" required></div>
             <div><label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor"  value="{{$livros->autor}}" class="form-control"></div>
+            <input type="text" name="autor" id="autor"  value="{{$livros->autor}}" class="form-control" required></div>
             <div><label for="preco">Preço</label>
-            <input type="text" name="preco" id="preco"  value="{{$livros->preco}}" class="form-control"></div>
+            <input type="text" name="preco" id="preco"  value="{{$livros->preco}}" class="form-control" required></div>
             <button type="submit" class="btn btn-primary">Salvar</button>
             <button type="submit" class="btn btn-info">Cancelar</button>
         </form> 

@@ -21,10 +21,10 @@
     <a href="{{ route('lista')}}"title="Lista" >Ver Lista</a>
         <form action="{{ route('salvar_livro') }}" method="post">
         @csrf
-            <div><label for="isbn" >ISBN</label><input  type="text" name="isbn" id="isbn" class="form-control"></div>
-            <div><label for="nome">Nome</label><input type="text" name="nome" id="nome" class="form-control"></div>
-            <div><label for="autor">Autor</label><input type="text" name="autor" id="autor" class="form-control"></div>
-            <div><label for="preco">Preço</label><input type="text" name="preco" id="preco" class="form-control"></div>
+            <div><label for="isbn" >ISBN</label><input  type="text" name="isbn" id="isbn" class="form-control" required></div>
+            <div><label for="nome">Nome</label><input type="text" name="nome" id="nome" class="form-control" required></div>
+            <div><label for="autor">Autor</label><input type="text" name="autor" id="autor" class="form-control" required></div>
+            <div><label for="preco">Preço</label><input type="text" name="preco" id="preco" class="form-control" required></div>
              <br>
             <button type="submit" class="btn btn-primary">Salvar</button>
             <button type="submit" class="btn btn-info">Cancelar</button>
